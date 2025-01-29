@@ -1,3 +1,3 @@
-const APP_TITLE = "Movie App"
+const APP_TITLE = "moo.v"
 
-export {APP_TITLE, API_KEY}
+export {APP_TITLE}
