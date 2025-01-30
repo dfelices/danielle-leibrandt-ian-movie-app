@@ -38,11 +38,9 @@ function PageHome() {
 
   // Select a random movie from the "Upcoming" category as the hero movies
   function getRandomMovies(movieList, count = 3) {
-    // If movieList is null, an undefined empty array, it returns [] (empty array).
     if (!movieList || movieList.length === 0)
       return [];
-    // To avoid changing the original of movieList, use the [...movelist] to create a copy.
-    // Returns a negative or positive number to ensure random sorting
+    // Use the [...movelist] to create a copy, returns a negative or positive number to ensure random sorting
     const shuffled = [...movieList].sort(() => 0.5 - Math.random());
     // Selects and returns the first count elements from the shuffled array
     return shuffled.slice(0, count);
