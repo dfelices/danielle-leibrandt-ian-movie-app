@@ -1,20 +1,18 @@
 import "../styles/Movies.css"
 import "../globals/globals.js"
+import MovieCard from "./MovieCard.jsx"
 
 function Movies({title, movies}){
+    
     return(
         <>
             <div className="movies">
                 <h1>{title}</h1>
-                <div className="movies-container">
-                    {/* {movies.map((movie) => (
-
-
+                    {movies.map((movie) => (
+                        <MovieCard key={movie.id} movie={movie}/>
                     )
-                    )} */}
-                </div>
+                    )}
             </div>
-
         </>
     )
 }
