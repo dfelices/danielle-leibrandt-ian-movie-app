@@ -3,10 +3,11 @@ import { useState, useEffect } from "react";
 // import Footer from '../components/Footer'
 import Movies from "../components/Movies";
 // import MovieCard from "../components/MovieCard";
-import { getPopular } from "../utilities/api";
+import { getPopular, getUpcoming } from "../utilities/api";
 
 function PageHome() {
   const [popularMovies, setPopularMovies] = useState([]);
+  const [upcomingMovies, setUpcomingMovies] = useState([]);
 
   useEffect(() => {
     getPopular()
@@ -16,6 +17,15 @@ function PageHome() {
       .catch((error) => {
         alert(error);
       });
+
+      getUpcoming()
+      .then((data) => {
+        setUpcomingMovies(data.results);
+      })
+      .catch((error) => {
+        alert(error);
+      });
+
   }, []);
   
   return(
@@ -23,6 +33,7 @@ function PageHome() {
       {/* <Header /> */}
       <h1>Home Page</h1>
       <Movies title="Popular Movies" movies={popularMovies} />
+      <Movies title="upcoming Movies" movies={upcomingMovies} />
       {/* <Footer /> */}
     </>
   )

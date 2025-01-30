@@ -23,8 +23,23 @@ function getPopular() {
     });
 }
 
+function getUpcoming() {
+  console.log(API_KEY);
+  return fetch(`${endPointUpcoming}?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error(error);
+      throw error;
+    });
+}
 
-export { getPopular };
+
+export { getPopular, getUpcoming };
 
 
 
