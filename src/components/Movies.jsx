@@ -7,11 +7,10 @@ function Movies({title, movies}){
     return(
         <>
             <div className="movies">
-                <h1>{title}</h1>
-                    {movies.map((movie) => (
-                        <MovieCard key={movie.id} movie={movie}/>
-                    )
-                    )}
+                {movies.map((movie) => (
+                    <MovieCard key={movie.id} movie={movie}/>
+                )
+                )}
             </div>
         </>
     )
