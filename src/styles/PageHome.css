@@ -1,0 +1,10 @@
+.home-banner {
+    --swiper-theme-color: #fff;
+    
+}
+
+.home-banner .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+}
+

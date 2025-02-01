@@ -4,13 +4,13 @@ import {
   endPointSearch,
   endPointTopRated,
   endPointUpcoming,
+  REGION
 } from "../globals/globals";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
-function getPopular() {
-  console.log(API_KEY);
-  return fetch(`${endPointPopular}?api_key=${API_KEY}`)
+function getPopular(adultSearch) {
+  return fetch(`${endPointPopular}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}&page=1`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -23,9 +23,13 @@ function getPopular() {
     });
 }
 
+<<<<<<< Updated upstream
 function getUpcoming() {
   console.log(API_KEY);
   return fetch(`${endPointUpcoming}?api_key=${API_KEY}`)
+=======
+function getTopRated(adultSearch) {
+  return fetch(`${endPointTopRated}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&page=1`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -38,8 +42,41 @@ function getUpcoming() {
     });
 }
 
+function getNowPlaying(adultSearch) {
+  return fetch(`${endPointNowPlaying}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}&page=1`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error(error);
+      throw error;
+    });
+}
+
+function getUpcoming(adultSearch) {
+  return fetch(`${endPointUpcoming}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}&with_release_type=2`)
+>>>>>>> Stashed changes
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error(error);
+      throw error;
+    });
+}
+
+<<<<<<< Updated upstream
 
 export { getPopular, getUpcoming };
+=======
+export { getPopular, getTopRated, getUpcoming, getNowPlaying };
+>>>>>>> Stashed changes
 
 
 
