@@ -23,24 +23,8 @@ function getPopular(adultSearch) {
     });
 }
 
-function getTopRated() {
-  console.log(API_KEY);
-  return fetch(`${endPointTopRated}?api_key=${API_KEY}`)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .catch((error) => {
-      console.error(error);
-      throw error;
-    });
-}
-
-function getNowPlaying() {
-  console.log(API_KEY);
-  return fetch(`${endPointNowPlaying}?api_key=${API_KEY}`)
+function getNowPlaying(adultSearch) {
+  return fetch(`${endPointNowPlaying}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}&page=1`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -55,20 +39,6 @@ function getNowPlaying() {
 
 function getTopRated(adultSearch) {
   return fetch(`${endPointTopRated}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&page=1`)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .catch((error) => {
-      console.error(error);
-      throw error;
-    });
-}
-
-function getNowPlaying(adultSearch) {
-  return fetch(`${endPointNowPlaying}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}&page=1`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");

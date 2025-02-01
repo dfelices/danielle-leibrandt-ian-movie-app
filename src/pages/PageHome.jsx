@@ -20,10 +20,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'react-tabs/style/react-tabs.css';
 
-import { getPopular, getUpcoming, getTopRated, getNowPlaying } from "../utilities/api";
-import {Tab, Tabs, TabList, TabPanel} from "react-tabs"
-import 'react-tabs/style/react-tabs.css'
-
 function PageHome() {
   const [popularMovies, setPopularMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
