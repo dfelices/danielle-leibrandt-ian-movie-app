@@ -13,12 +13,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.3",
-<<<<<<< Updated upstream
-    "swiper": "^11.2.1"
-=======
-    "react-tabs": "^6.1.0",
-    "swiper": "^11.2.2"
->>>>>>> Stashed changes
+    "swiper": "^11.2.2",
+    "react-tabs": "^6.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

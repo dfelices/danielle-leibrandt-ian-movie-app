@@ -23,11 +23,36 @@ function getPopular(adultSearch) {
     });
 }
 
-<<<<<<< Updated upstream
-function getUpcoming() {
+function getTopRated() {
   console.log(API_KEY);
-  return fetch(`${endPointUpcoming}?api_key=${API_KEY}`)
-=======
+  return fetch(`${endPointTopRated}?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error(error);
+      throw error;
+    });
+}
+
+function getNowPlaying() {
+  console.log(API_KEY);
+  return fetch(`${endPointNowPlaying}?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error(error);
+      throw error;
+    });
+}
+
 function getTopRated(adultSearch) {
   return fetch(`${endPointTopRated}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&page=1`)
     .then((response) => {
@@ -58,7 +83,6 @@ function getNowPlaying(adultSearch) {
 
 function getUpcoming(adultSearch) {
   return fetch(`${endPointUpcoming}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}&with_release_type=2`)
->>>>>>> Stashed changes
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -71,15 +95,7 @@ function getUpcoming(adultSearch) {
     });
 }
 
-<<<<<<< Updated upstream
-
-export { getPopular, getUpcoming };
-=======
 export { getPopular, getTopRated, getUpcoming, getNowPlaying };
->>>>>>> Stashed changes
-
-
-
 
 // {
 //   "change_keys": [
