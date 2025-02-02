@@ -68,19 +68,69 @@ function getUpcoming(adultSearch) {
 // Function to retrieve a single movie page by ID
 function getMovies(movieId, adultSearch) {
   return fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}`)
-  .then((response) => {
-    if(!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    return response.json();
-  })
-  .catch((error) => {
-    console.log(error);
-    throw error;
-  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error;
+    })
 }
 
-export { getPopular, getTopRated, getUpcoming, getNowPlaying, getMovies };
+// Function to get a movie genre 
+function getMovieGenre() {
+  return fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch genres');
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error;
+    })
+}
+
+// Function to get a movie trailer 
+function getTrailer(movieId) {
+  return fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Error fetching trailer:');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (data.results && data.results.length > 0) {
+        return data.results.find(video => video.type === 'Trailer');
+      }
+      return null;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error;
+    })
+}
+
+function getMovieCast(movieId) {
+  return fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Error fetching movie cast data");
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error("Error fetching movie cast:", error);
+      throw error;
+    });
+}
+
+export { getPopular, getTopRated, getUpcoming, getNowPlaying, getMovies, getMovieGenre, getTrailer, getMovieCast };
 
 // {
 //   "change_keys": [
@@ -179,4 +229,3 @@ export { getPopular, getTopRated, getUpcoming, getNowPlaying, getMovies };
 //     ]
 //   }
 // }
->>>>>>> hero
