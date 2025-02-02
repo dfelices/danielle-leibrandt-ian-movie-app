@@ -23,4 +23,19 @@ function getPopular() {
     });
 }
 
-export { getPopular };
+// Function to retrieve a single movie page by ID
+function getMovies(movieId, adultSearch) {
+  return fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}`)
+  .then((response) => {
+    if(!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .catch((error) => {
+    console.log(error);
+    throw error;
+  })
+}
+
+export { getPopular, getMovies };
