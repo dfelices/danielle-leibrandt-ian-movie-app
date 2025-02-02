@@ -1,0 +1,82 @@
+@import url('../styles/base.css');
+
+.border{
+    border: solid 5px var(--main-font-black);
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: var(--main-bg-color);
+}
+
+header{
+    color: var(--main-font-black);
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.logo a, 
+.logo a:visited, 
+.logo a:active,
+.logo a:focus{
+    width: fit-content;
+    height: auto;
+    font-family: var(--heading-font);
+    font-size: 4.6875rem;
+    font-weight: 700;   
+    letter-spacing: 5.25px;
+    text-decoration: none;
+    color: var(--main-font-black);
+    padding: 0;
+    margin: 0;
+}
+
+.logo a:hover{
+    color: var(--hover-brown);
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-logo {
+    display: none;
+  }
+  
+@media (min-width: 768px) {
+    .mobile-logo {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+  
+    .desktop-logo {
+      display: flex;
+    }
+}
+
+button{
+    border: none;
+    background-color: var(--main-bg-color);
+    color: var(--main-font-black);
+    cursor: pointer;
+}
+
+/* .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
+} */
+
+
