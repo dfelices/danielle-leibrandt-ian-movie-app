@@ -116,6 +116,7 @@ function getTrailer(movieId) {
     })
 }
 
+// Function to get a movie casting list
 function getMovieCast(movieId) {
   return fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}`)
     .then((response) => {
