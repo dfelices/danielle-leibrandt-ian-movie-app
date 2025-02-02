@@ -1,0 +1,210 @@
+.hero-slider {
+    position: relative;
+}
+
+.hero-movie-image {
+    width: 100%;
+    max-width: 70rem;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.5s ease;
+    filter: brightness(0.7);
+}
+
+.hero-movie-info {
+    display: grid;
+    grid-template-columns: 1fr 1tr 1fr 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    color: var(--main-font-white);
+    font-family: var(--heading-font);
+}
+
+.hero_movie_title {
+    width: 100%;
+    font-size: 1.5rem;
+    grid-column: 1/4;
+    grid-row: 1;
+    margin: 0;
+}
+
+.hero_release_date {
+    padding: 0;
+    margin-top: .2rem;
+    margin-bottom: .5rem;
+    font-size: .8rem;
+    font-weight: 600;
+    opacity: 0.9;
+    grid-column: 1/4;
+    grid-row: 2;
+}
+
+.hero_overview {
+    display: none;
+}
+
+.moreinfo_btn {
+    grid-row: 3;
+    grid-column: 1;
+    font-size: .8rem;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 1.5rem;
+    padding: .3rem .4rem;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+}
+
+@media screen and (min-width: 450px) {
+
+    .hero-movie-info {
+        top: 5rem;
+    }
+
+    .moreinfo_btn {
+        grid-row: 4;
+        grid-column: 1;
+    }
+}
+
+@media screen and (min-width: 32rem) {
+
+    .hero-movie-info {
+        top: 8rem;
+    }
+
+    .hero_release_date {
+        font-size: 1rem;
+        opacity: 0.9;
+        grid-column: 1/4;
+        grid-row: 2;
+    }
+
+    .hero_overview {
+        display: block;
+        grid-row: 3;
+        grid-column: 1/4;
+        font-size: .8rem;
+        font-weight: 500;
+        margin-top: 0;
+    }
+
+    .moreinfo_btn {
+        grid-row: 4;
+        grid-column: 1;
+    }
+}
+
+@media screen and (min-width: 45rem) {
+
+    .hero-movie-info {
+        top: 15rem;
+    }
+
+    .hero_overview {
+        margin-top: 0;
+        width: 70%;
+    }
+
+    .hero_movie_title {
+        font-size: 2rem;
+    }
+
+    .moreinfo_btn {
+        grid-row: 4;
+        grid-column: 1;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+
+    .hero-movie-info {
+        top: 20rem;
+    }
+
+    .hero_movie_title {
+        font-size: 2.5rem;
+        width: 90%;
+    }
+
+    .hero_overview {
+        margin-top: 0;
+        grid-column: 1/3;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+
+    .hero-movie-info {
+        top: 25rem;
+        left: 2rem;
+    }
+
+    .hero_overview {
+        margin-top: 0;
+        width: 40%;
+    }
+
+    .moreinfo_btn {
+        grid-row: 4;
+        grid-column: 1;
+    }
+}
+
+@media screen and (min-width: 73.37rem) {
+
+    .hero-movie-info {
+        top: 25rem;
+        left: 3rem;
+    }
+
+    .moreinfo_btn {
+        grid-row: 4;
+        grid-column: 1;
+    }
+}
+
+@media screen and (min-width: 75rem) {
+
+    .hero-movie-info {
+        top: 25rem;
+        left: 5rem;
+    }
+
+    .moreinfo_btn {
+        grid-row: 4;
+        grid-column: 1;
+    }
+}
+
+@media screen and (min-width: 78.5rem) {
+
+    .hero-movie-info {
+        top: 25rem;
+        left: 8rem;
+    }
+
+    .moreinfo_btn {
+        grid-row: 4;
+        grid-column: 1;
+    }
+}
+
+@media screen and (min-width: 80rem) {
+
+    .hero-movie-info {
+        top: 25rem;
+        left: 22rem;
+    }
+
+    .moreinfo_btn {
+        grid-row: 4;
+        grid-column: 1;
+    }
+}
