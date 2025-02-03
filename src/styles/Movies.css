@@ -1,0 +1,388 @@
+
+.single-movie-title {
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: var(--heading-font);
+    line-height: 30px;
+    margin-left: 0.65rem;
+    text-align: left;
+}
+
+.single-movie-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto; 
+    gap: 1rem;
+    padding: 0
+}
+
+.single-movie-poster {
+    margin: 10px;
+    color: var(--main-font-black);
+    font-family: var(--body-font);
+    display: flex;
+    flex-direction: row;
+    grid-row: 1;
+    justify-content: start;
+}
+
+.single-movie-poster img {
+    width: 100%;
+    height: auto;
+    max-width: 342px;
+    margin-right: 0.65rem;
+}
+
+.single-movie-info {
+    font-size: 0.5rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    grid-row: 2;
+}
+
+.single-movie-info p {
+    margin: 0;
+}
+
+.single-movie-genre {
+    padding: 0;
+    margin: 0.2rem 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    flex-wrap: wrap;
+}
+
+.single-movie-genre li {
+    list-style-type: none;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.single-movie-genre li::after {
+    content: " / ";
+}
+
+.single-movie-genre li:last-child::after {
+    content: "";
+}
+
+.single-movie-info p {
+    margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.trailer-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.2rem; 
+    margin-bottom: 0.2rem;    
+    align-items: center;
+}
+
+.rating-circle {
+    display: inline-block;
+    width: 20px; 
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    color: #292726;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.55rem;
+    margin-left: 0.5rem;
+}
+
+.movie-cast-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 0.3rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: calc(100% - 2rem);
+    max-width: 100%;
+}
+
+.movie-cast-list::-webkit-scrollbar {
+    height: 0.5rem;
+}
+
+.movie-cast-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 0.3rem;
+}
+
+.movie-cast-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.actor-card {
+    flex-shrink: 0;
+    width: 5.75rem;
+    scroll-snap-align: start;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.actor-card img {
+    width: 100%;
+    border-radius: 0.3rem;
+}
+
+.actor-card p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-size: 0.5rem;
+    text-align: left;
+}
+
+.movie-cast-section {
+    font-family: var(--heading-font);
+    margin-left: 0.65rem;
+    margin-bottom: 0.3rem;
+    grid-row: 3;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+
+/* 320px 이하에서의 스타일 */
+@media (max-width: 320px) {
+    .single-movie-poster img {
+        width: 130px; 
+    }
+
+    .single-movie-title {
+        text-align: left;
+        margin-left: 0.65rem;
+    }
+
+}
+
+/* 425px 이하에서의 스타일 */
+@media (min-width: 321px) and (max-width: 425px) {
+    .single-movie-poster img {
+        width: 180px;
+    }
+    .single-movie-info {
+        font-size: 1rem;
+    }
+
+    .single-movie-title {
+        font-size: 1.3rem;
+    }
+
+    .single-movie-info {
+        margin-left: 1rem;
+    }
+
+    .trailer-section svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .rating-circle {
+        width: 25px;
+        height: 25px;
+        font-size: 0.7rem;
+    }
+}
+
+/* 768px 이하에서의 스타일 */
+@media (min-width: 426px) and (max-width: 768px) {
+    .single-movie-poster img {
+        width: 250px;
+    }
+
+    .single-movie-info {
+        font-size: 1.1rem;
+    }
+
+    .single-movie-title {
+        font-size: 1.5rem;
+    }
+
+    .single-movie-info {
+        margin-left: 1.5rem;
+    }
+
+    .trailer-section svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .rating-circle {
+        width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+}
+
+/* 1024px 이하에서의 스타일 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .single-movie-poster img {
+        width: 300px;
+    }
+
+    .single-movie-info {
+        font-size: 1.2rem;
+    }
+
+    .single-movie-title {
+        font-size: 1.5rem;
+    }
+
+    .single-movie-wrapper {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .single-movie-info {
+        margin-left: 2rem;
+    }
+
+    .trailer-section svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .rating-circle {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .movie-cast-list {
+        width: 30.25rem;
+    }
+
+    .actor-card {
+        width: calc(100% / 5);
+    }
+
+    .movie-cast-section {
+        position: absolute;
+        top: 30rem;
+        left: 31rem;
+    }
+
+}
+
+/* 1440px 이하에서의 스타일 */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .single-movie-poster img {
+        width: 350px; 
+    }
+
+    .single-movie-info {
+        font-size: 1.25rem;
+    }
+
+    .single-movie-title {
+        font-size: 2rem;
+    }
+
+    .single-movie-wrapper {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .single-movie-info {
+        margin-left: 2.5rem;
+    }
+
+    .trailer-section svg {
+        width: 47px;
+        height: 47px;
+    }
+
+    .rating-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .movie-cast-list {
+        width: 35rem;
+    }
+
+    .actor-card {
+        width: calc(100% / 5);
+    }
+
+    .movie-cast-section {
+        position: absolute;
+        top: 35rem;
+        left: 34rem;
+    }
+
+}
+
+/* 1440px 이상에서의 스타일 */
+@media (min-width: 1441px) {
+    .single-movie-poster img {
+        width: 400px;
+    }
+    
+    .single-movie-info {
+        font-size: 1.25rem;
+    }
+
+    .single-movie-title {
+        font-size: 2rem;
+        line-height: 0.8;
+    }
+
+    .single-movie-wrapper {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .single-movie-info {
+        margin-left: 3rem;
+    }
+
+    .trailer-section svg {
+        width: 47px;
+        height: 47px;
+    }
+
+    .rating-circle {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .movie-cast-list {
+        width: 35rem;
+    }
+
+    .actor-card {
+        width: calc(100% / 5);
+    }
+
+    .movie-cast-section {
+        position: absolute;
+        top: 35rem;
+        left: 42rem;
+    }
+
+}
+
+/* 오버뷰 길이가 넘어가지 않게 하기 */
+.single-movie-info p {
+    word-wrap: break-word; /* 긴 단어가 넘치지 않도록 줄바꿈 */
+    overflow-wrap: break-word;
+    white-space: normal;
+}
