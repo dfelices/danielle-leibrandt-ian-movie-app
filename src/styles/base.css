@@ -21,23 +21,27 @@
 # Base
 --------------------------------------------------------------*/
 
-/* Colours */
+/* Font - Syne */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&display=swap');
 
-:root {
-    --main-bg-color: #E5ECEA;
+/* Font - Source Code Pro */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+	
+	/* Colours */
+	
+	:root {
+	--main-bg-color: #E5ECEA;
     --main-font-black: #292726;
     --main-font-white: #FFFFFF;
     --hover-blue: #9BE3EF;
+	--hover-brown: #B5936E;
     --heading-font: "Syne", serif;
+	--button-font: "Source Code Pro", serif;
     --body-font: "Source Code Pro", serif;
   }
 
-/* body
---------------------------------------------- */
-body {
-}
 
-/* Colours
+/* Typography
 --------------------------------------------- */
 
 
