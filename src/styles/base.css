@@ -10,24 +10,26 @@
 	- Typography
 	- Elements
 	- Links
-# Layouts
-# Components (CALLED IN component-specific files) 
+	# Layouts
+	# Components (CALLED IN component-specific files) 
 	- Header
 	- Main
 	- Footer
 --------------------------------------------------------------*/
-
+	
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-
-/* Colours */
-
-:root {
-    --main-bg-color: #E5ECEA;
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&display=swap');
+	
+	/* Colours */
+	
+	:root {
+	--main-bg-color: #E5ECEA;
     --main-font-black: #292726;
     --main-font-white: #FFFFFF;
     --hover-blue: #9BE3EF;
+	--hover-brown: #B5936E;
     --heading-font: "Syne", serif;
     --body-font: "Source Code Pro", serif;
   }
@@ -35,7 +37,6 @@
 
 /* Typography
 --------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&display=swap');
 
 
 /* Elements
