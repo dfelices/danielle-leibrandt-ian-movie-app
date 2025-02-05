@@ -6,20 +6,31 @@ import FavoriteButton from "./FavoriteButton.jsx";
 function MovieCard({ movie }) {
   // const navigate = useNavigate()
 
+  const getRatingColor = (rating) => {
+    if (rating >= 8) return "green";
+    if (rating >= 5) return "yellow";
+    return "red";
+  };
+
   return (
     <>
       <div className="movie-card">
         <img src={`${URL_IMAGE}/w342/${movie.poster_path}`} alt={movie.title} />
         <div className="backdrop">
+          <div className="rating-and-favorite">
+            <div
+              className="rating-border"
+              style={{ borderColor: getRatingColor(movie.vote_average) }}
+            >
+              {movie.vote_average.toFixed(1)}
+            </div>
+            <FavoriteButton movie={movie} />
+          </div>
           <div className="title-and-release">
             <h2>{movie.title}</h2>
             <p>{movie.release_date}</p>
           </div>
-          <p>Movie Exerpt</p>
-          <div className="rating-and-favorite">
-            <p>{movie.vote_average.toFixed(1)}</p>
-            <FavoriteButton movie={movie} />
-          </div>
+          <p>Movie Excerpt</p>
         </div>
       </div>
     </>
