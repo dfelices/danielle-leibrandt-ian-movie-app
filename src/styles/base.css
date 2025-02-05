@@ -9,8 +9,8 @@
 	- Typography
 	- Elements
 	- Links
-# Layouts
-# Components (CALLED IN component-specific files) 
+	# Layouts
+	# Components (CALLED IN component-specific files) 
 	- Header
 	- Main
 	- Footer
@@ -19,8 +19,6 @@
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-/* Typography
---------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&display=swap");
 
 /* Colours */
@@ -30,9 +28,13 @@
   --main-font-black: #292726;
   --main-font-white: #ffffff;
   --hover-blue: #9be3ef;
+  --hover-brown: #b5936e;
   --heading-font: "Syne", serif;
   --body-font: "Source Code Pro", serif;
 }
+
+/* Typography
+--------------------------------------------- */
 
 /* Elements
 --------------------------------------------- */
