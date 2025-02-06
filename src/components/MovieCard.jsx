@@ -12,6 +12,17 @@ function MovieCard({ movie }) {
     return "red";
   };
 
+  const formatDate = (dateString) => {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  };
+
+  const getShortDescription = (description) => {
+    return description.length > 150
+      ? description.substring(0, 150) + "..."
+      : description;
+  };
+
   return (
     <>
       <div className="movie-card">
@@ -22,15 +33,17 @@ function MovieCard({ movie }) {
               className="rating-border"
               style={{ borderColor: getRatingColor(movie.vote_average) }}
             >
-              {movie.vote_average.toFixed(1)}
+              {Math.round(movie.vote_average * 10)}
             </div>
             <FavoriteButton movie={movie} />
           </div>
           <div className="title-and-release">
             <h2>{movie.title}</h2>
-            <p>{movie.release_date}</p>
+            <p className="release-date">{formatDate(movie.release_date)}</p>
+            <p className="movie-excerpt">
+              {getShortDescription(movie.overview)}
+            </p>
           </div>
-          <p>Movie Excerpt</p>
         </div>
       </div>
     </>

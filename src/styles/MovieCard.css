@@ -1,15 +1,18 @@
 .movie-card {
   position: relative;
-  width: 342px;
-  height: 513px;
+  width: 300px;
+  height: 450px;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced drop shadow */
 }
 
 .movie-card:hover {
   transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
 .movie-card img {
@@ -41,23 +44,27 @@
 .title-and-release {
   text-align: center;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Stronger text shadow */
 }
 
 .title-and-release h2 {
   font-size: 1.5rem;
   margin-bottom: 8px;
+  font-family: var(--heading-font);
+  font-weight: 800; /* Extra bold */
 }
 
 .title-and-release p {
   font-size: 0.9rem;
-  color: #ccc;
+  color: #ffffff;
 }
 
 .rating-and-favorite {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .rating-and-favorite p {
@@ -75,6 +82,12 @@
 .movie-excerpt {
   text-align: center;
   margin-top: auto;
+  font-family: var(--body-font);
+}
+
+.release-date {
+  font-family: var(--heading-font);
+  margin-bottom: 10px;
 }
 
 .rating-border {
@@ -85,7 +98,8 @@
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
+  font-family: var(--body-font);
   font-weight: bold;
-  border: 3px solid;
+  border: 5px solid;
   margin-right: 10px;
 }
