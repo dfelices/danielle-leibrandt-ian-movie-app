@@ -1,0 +1,87 @@
+.about-page {
+    background-color: var(--main-bg-color);
+    background-image: url(../media/about-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    padding-left: 1rem;
+}
+
+.about-header h1 {
+    font-size: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 0;
+    padding-top: 1rem;
+}
+
+.about-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.about-text {
+    font-size: 0.7rem;
+    width: 80%;
+}
+
+.tmdb-text img {
+    width: 7rem;
+    height: auto; 
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.tmdb-text p {
+    width: 100%;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .about-page {
+        background-size: 800px auto; 
+        height: 600px;
+    }
+
+    .about-header h1 {
+        font-size: 3rem;
+    }
+
+    .about-header h2 {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .tmdb-text p {
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .about-page {
+        background-size: 1280px auto;
+        height: 840px;
+    }
+
+    .about-header h1 {
+        font-size: 4rem;
+    }
+
+    .about-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-text {
+        font-size: 1.2rem;
+    }
+
+    .tmdb-text p {
+        font-size: 1.2rem;
+    }
+}

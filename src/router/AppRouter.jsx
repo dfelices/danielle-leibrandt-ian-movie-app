@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Nav from '../components/Nav';
 // import Footer from '../components/Footer';
 import PageHome from "../pages/PageHome";
-// import PageAbout from '../pages/PageAbout';
+import PageAbout from '../pages/PageAbout';
 // import PageFavorites from '../pages/PageFavorites';
 
 function AppRouter() {
@@ -13,6 +13,7 @@ function AppRouter() {
             <Nav /> */}
       <Routes>
         <Route path="/" element={<PageHome />} />
+        <Route path="/about" element={<PageAbout />} />
         {/* <Route path="/favorites" element={<PageFavorites />} />
                 <Route path="/about" element={<PageAbout />} /> */}
       </Routes>
