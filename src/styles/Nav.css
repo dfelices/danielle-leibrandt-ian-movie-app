@@ -78,7 +78,7 @@ a:focus
     padding: 0;
 }
 
-ul{
+.main-nav ul{
     list-style: none;
     font-size: 2rem;
     font-weight: bold;
@@ -93,7 +93,7 @@ ul{
 }
 
 @media (min-width: 768px){
-    ul{
+    .main-nav ul{
         font-size: 1.875rem;
         font-weight: 400;
         visibility: visible;
@@ -122,7 +122,7 @@ ul{
     } */
 }
 
-li{
+.main-nav li{
     width: 100%;
     height: auto;
     padding: 0;
@@ -133,7 +133,7 @@ li{
 }
 
 @media (min-width: 768px){
-    li{
+    .main-nav li{
         height: 100%;
     }
 }
