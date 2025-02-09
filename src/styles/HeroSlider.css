@@ -1,7 +1,5 @@
-@import url('../styles/base.css');
-
-/*==================================================
-//=============HERO IMAGE SECTION DESIGN============
+/*===================================================
+//=============HERO IMAGE SECTION DESIGN=============
 //==================================================*/
 
 .hero-slider {
@@ -33,8 +31,8 @@
 }
 
 .hero_movie_title {
-    width: 90%;
-    font-size: 1.5rem;
+    width: 100%;
+    font-size: 1.3rem;
     font-family: var(--heading-font);
     grid-column: 1/4;
     grid-row: 1;
@@ -139,6 +137,6 @@
 
 @media screen and (min-width: 73.37rem) {
     .hero-movie-info {
-        top: 28rem;
+        top: 30rem;
     }
 }
