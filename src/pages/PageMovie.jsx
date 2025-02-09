@@ -46,7 +46,7 @@ const PageMovie = () => {
 
     return (
         <>
-            <section className="single-movie-wrapper">
+            <div className="single-movie-wrapper">
                 <div className="single-movie-title">
                     <h1>{movie.title}</h1>
                 </div>
@@ -110,7 +110,7 @@ const PageMovie = () => {
                         )}
                     </div>
                 </div>
-            </section>
+            </div>
         </>
     )
 }
