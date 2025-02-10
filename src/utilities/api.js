@@ -4,13 +4,13 @@ import {
   endPointSearch,
   endPointTopRated,
   endPointUpcoming,
+  REGION
 } from "../globals/globals";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
-function getPopular() {
-  console.log(API_KEY);
-  return fetch(`${endPointPopular}?api_key=${API_KEY}`)
+function getPopular(adultSearch) {
+  return fetch(`${endPointPopular}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}&page=1`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -23,9 +23,8 @@ function getPopular() {
     });
 }
 
-function getTopRated() {
-  console.log(API_KEY);
-  return fetch(`${endPointTopRated}?api_key=${API_KEY}`)
+function getNowPlaying(adultSearch) {
+  return fetch(`${endPointNowPlaying}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}&page=1`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -38,9 +37,8 @@ function getTopRated() {
     });
 }
 
-function getNowPlaying() {
-  console.log(API_KEY);
-  return fetch(`${endPointNowPlaying}?api_key=${API_KEY}`)
+function getTopRated(adultSearch) {
+  return fetch(`${endPointTopRated}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&page=1`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -53,9 +51,8 @@ function getNowPlaying() {
     });
 }
 
-function getUpcoming() {
-  console.log(API_KEY);
-  return fetch(`${endPointUpcoming}?api_key=${API_KEY}`)
+function getUpcoming(adultSearch) {
+  return fetch(`${endPointUpcoming}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}&with_release_type=2`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -67,12 +64,8 @@ function getUpcoming() {
       throw error;
     });
 }
-
 
 export { getPopular, getTopRated, getUpcoming, getNowPlaying };
-
-
-
 
 // {
 //   "change_keys": [

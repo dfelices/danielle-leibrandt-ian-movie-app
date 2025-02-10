@@ -5,14 +5,19 @@ import Movies from "../components/Movies";
 // import MovieCard from "../components/MovieCard";
 import HeroSlider from "../components/HeroSlider";
 
-// Swiper utilities
+// Get API's for the movies 
+import { getPopular, getUpcoming, getTopRated, getNowPlaying } from '../utilities/api';
+
+//Page style CSS
+import '../styles/PageHome.css';
+
+// Library utilities { Swiper, Tabs }
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from "swiper/modules";
+import { Pagination } from 'swiper/modules';
+import {Tab, Tabs, TabList, TabPanel} from "react-tabs";
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { getPopular, getUpcoming, getTopRated, getNowPlaying } from "../utilities/api";
-import {Tab, Tabs, TabList, TabPanel} from "react-tabs"
-import 'react-tabs/style/react-tabs.css'
+import 'react-tabs/style/react-tabs.css';
 
 function PageHome() {
   const [popularMovies, setPopularMovies] = useState([]);
