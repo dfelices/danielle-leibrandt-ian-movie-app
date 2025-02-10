@@ -17,7 +17,6 @@ import { Pagination } from 'swiper/modules';
 import {Tab, Tabs, TabList, TabPanel} from "react-tabs";
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { getPopular, getUpcoming, getTopRated, getNowPlaying } from "../utilities/api";
 import '../styles/Movies.css';
 import 'react-tabs/style/react-tabs.css';
 
@@ -82,10 +81,6 @@ function PageHome() {
 
   return (
     <>
-
-      <Header />
-    
-      {/* <Header /> */}
       <div className="hero-container">
         <Swiper
           className="home-banner"
