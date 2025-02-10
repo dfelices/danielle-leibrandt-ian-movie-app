@@ -1,50 +1,105 @@
 .favorites-page {
   padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .movie-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: flex-start;
 }
 
 .movie-card {
-  width: 300px;
+  flex: 0 0 300px;
   height: 450px;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add drop shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+}
+
+.backdrop {
+  padding: 0;
 }
 
 .movie-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-}
-
-@media (max-width: 1024px) {
-  .movie-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .movie-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .movie-grid {
-    grid-template-columns: 1fr;
-  }
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 30px;
   font-family: var(--heading-font);
-  font-weight: 800; /* Extra bold */
+  font-weight: 800;
+}
+
+@media (max-width: 1024px) {
+  .favorites-page {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 768px) {
+  .favorites-page {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-page {
+    max-width: 320px;
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+  .movie-card {
+    flex: 0 0 calc(50% - 5px); /* Calculate width: (100% - gap) / 2 */
+    height: 218px;
+    font-size: 0.7rem; /* Base font size for card content */
+  }
+  .movie-grid {
+    gap: 10px;
+    justify-content: space-between; /* Distribute space between items */
+  }
+  /* Scale down the rating circle */
+  .rating-border {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+    border-width: 2px;
+  }
+  /* Adjust title size */
+  .title-and-release h2 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .title-and-release p {
+    font-size: 0.5rem;
+    margin-bottom: 4px;
+  }
+  /* Adjust date and excerpt text */
+  .release-date,
+  .movie-excerpt {
+    font-size: 0.6em;
+    line-height: 1.2;
+  }
+  /* Adjust padding of the backdrop */
+  .backdrop {
+    padding: 10px;
+  }
+  /* Adjust spacing between elements */
+  .rating-and-favorite {
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  /* Scale down the favorite icon */
+  .fave-icon {
+    width: 20px;
+    height: 20px;
+  }
 }

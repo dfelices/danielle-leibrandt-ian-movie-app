@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PageHome from "../pages/PageHome";
 // import PageAbout from "../pages/PageAbout";
 import PageFavorites from "../pages/PageFavorites";
+import PageNoFavorites from "../pages/PageNoFavorites";
 import { GlobalProvider } from "../context/GlobalContext";
 
 function AppRouter() {
@@ -16,6 +17,7 @@ function AppRouter() {
         <Routes>
           <Route path="/" element={<PageHome />} />
           <Route path="/favorites" element={<PageFavorites />} />
+          <Route path="/no-favorites" element={<PageNoFavorites />} />
           {/* <Route path="/about" element={<PageAbout />} /> */}
         </Routes>
         {/* <Footer /> */}
