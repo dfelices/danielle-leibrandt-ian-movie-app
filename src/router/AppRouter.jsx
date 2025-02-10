@@ -3,11 +3,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PageHome from "../pages/PageHome";
 import PageMovie from "../pages/PageMovie";
-// import PageAbout from '../pages/PageAbout';
+import PageAbout from '../pages/PageAbout';
 import PageFavorites from "../pages/PageFavorites";
 import PageNoFavorites from "../pages/PageNoFavorites";
 import { GlobalProvider } from "../context/GlobalContext";
-
 
 function AppRouter() {
   return (
@@ -19,11 +18,10 @@ function AppRouter() {
         <Route path="/pagemovie/:id" element={<PageMovie />} />
         <Route path="/favorites" element={<PageFavorites />} />
         <Route path="/no-favorites" element={<PageNoFavorites />} />
-        {/* <Route path="/about" element={<PageAbout />} /> */}
+        <Route path="/about" element={<PageAbout />} />
       </Routes>
       <Footer />
       </GlobalProvider>
-
     </BrowserRouter>
   );
 }
