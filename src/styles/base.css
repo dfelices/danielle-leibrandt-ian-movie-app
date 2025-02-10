@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -16,17 +15,13 @@
 	- Main
 	- Footer
 --------------------------------------------------------------*/
-	
+
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-
 /* Font - Syne */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&display=swap');
 
-/* Font - Source Code Pro */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-	
 	/* Colours */
 	
 	:root {
@@ -40,14 +35,23 @@
     --body-font: "Source Code Pro", serif;
   }
 
+/* Colours */
+
+:root {
+  --main-bg-color: #e5ecea;
+  --main-font-black: #292726;
+  --main-font-white: #ffffff;
+  --hover-blue: #9be3ef;
+  --hover-brown: rgba(181, 147, 110, 0.8);
+  --heading-font: "Syne", serif;
+  --body-font: "Source Code Pro", serif;
+}
 
 /* Typography
 --------------------------------------------- */
 
-
 /* Elements
 --------------------------------------------- */
-
 
 /* Links, Inputs, Textareas
 --------------------------------------------- */
@@ -63,11 +67,12 @@
 /* Header
 --------------------------------------------- */
 
-
 /* Main
 --------------------------------------------- */
 
+body {
+  background-color: var(--main-bg-color);
+}
 
 /* Footer
 --------------------------------------------- */
-
