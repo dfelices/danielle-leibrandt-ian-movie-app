@@ -17,6 +17,8 @@ import { Pagination } from 'swiper/modules';
 import {Tab, Tabs, TabList, TabPanel} from "react-tabs";
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { getPopular, getUpcoming, getTopRated, getNowPlaying } from "../utilities/api";
+import '../styles/Movies.css';
 import 'react-tabs/style/react-tabs.css';
 
 function PageHome() {
@@ -25,6 +27,7 @@ function PageHome() {
   const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
   const [heroMovies, setHeroMovies] = useState([]);
+  const [selectedTab, setSelectedTab] = useState(0);
 
   useEffect(() => {
     getPopular()
@@ -99,32 +102,20 @@ function PageHome() {
         </Swiper>
       </div>
 
-      <h1>Home Page</h1>
-      <Tabs>
-        <TabList>
-          <Tab>Popular</Tab>
-          <Tab>Top Rated</Tab>
-          <Tab>Now Playing</Tab>
-          <Tab>Upcoming</Tab>
-        </TabList>
+      <Tabs selectedIndex={selectedTab} onSelect={(index) => setSelectedTab(index)}>
         <TabPanel>
-          <h2>Popular Movies</h2>
-          <Movies title="Popular Movies" movies={popularMovies}/>
+          <Movies title="Popular Movies" movies={popularMovies} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         </TabPanel>
         <TabPanel>
-          <h2>Top Rated</h2>
-          <Movies title="Top Rated Movies" movies={topRatedMovies}/>
+          <Movies title="Top Rated Movies" movies={topRatedMovies} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         </TabPanel>
         <TabPanel>
-          <h2>Now Playing</h2>
-          <Movies title="Now Playing Movies" movies={nowPlayingMovies}/>
+          <Movies title="Now Playing Movies" movies={nowPlayingMovies} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         </TabPanel>
         <TabPanel>
-          <h2>Upcoming Movies</h2>
-          <Movies title="Upcoming Movies" movies={upcomingMovies}/>
+          <Movies title="Upcoming Movies" movies={upcomingMovies} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         </TabPanel>
       </Tabs>
-      {/* <Footer /> */}
     </>
   )
 }

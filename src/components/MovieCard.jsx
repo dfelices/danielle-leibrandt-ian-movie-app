@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import "../styles/MovieCard.css";
 import { URL_IMAGE } from "../globals/globals.js";
 import FavoriteButton from "./FavoriteButton.jsx";
