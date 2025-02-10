@@ -27,9 +27,10 @@ const HeroSlider = ({ movie }) => {
                 src={`${URL_IMAGE}/w1280/${movie.backdrop_path}`}
                 alt={`${movie.title} poster`}
             />
+            <div className='hero_movie_title'>
+                <h2>{movie.title}</h2>
+            </div>
             <div className="hero-movie-info">
-                <h2 className='hero_movie_title'>
-                    {movie.title}</h2>
                 <h3 className='hero_release_date'>
                     {formatReleaseDate(movie.release_date)}</h3>
                 <p className='hero_overview'>

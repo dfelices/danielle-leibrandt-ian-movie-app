@@ -35,18 +35,6 @@
     --body-font: "Source Code Pro", serif;
   }
 
-/* Colours */
-
-:root {
-  --main-bg-color: #e5ecea;
-  --main-font-black: #292726;
-  --main-font-white: #ffffff;
-  --hover-blue: #9be3ef;
-  --hover-brown: rgba(181, 147, 110, 0.8);
-  --heading-font: "Syne", serif;
-  --body-font: "Source Code Pro", serif;
-}
-
 /* Typography
 --------------------------------------------- */
 
