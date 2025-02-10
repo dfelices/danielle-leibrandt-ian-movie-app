@@ -4,13 +4,13 @@ import {
   endPointSearch,
   endPointTopRated,
   endPointUpcoming,
+  REGION
 } from "../globals/globals";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
-function getPopular() {
-  console.log(API_KEY);
-  return fetch(`${endPointPopular}?api_key=${API_KEY}`)
+function getPopular(adultSearch) {
+  return fetch(`${endPointPopular}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}&page=1`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -23,9 +23,8 @@ function getPopular() {
     });
 }
 
-function getTopRated() {
-  console.log(API_KEY);
-  return fetch(`${endPointTopRated}?api_key=${API_KEY}`)
+function getNowPlaying(adultSearch) {
+  return fetch(`${endPointNowPlaying}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}&page=1`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -38,9 +37,8 @@ function getTopRated() {
     });
 }
 
-function getNowPlaying() {
-  console.log(API_KEY);
-  return fetch(`${endPointNowPlaying}?api_key=${API_KEY}`)
+function getTopRated(adultSearch) {
+  return fetch(`${endPointTopRated}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&page=1`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -53,9 +51,8 @@ function getNowPlaying() {
     });
 }
 
-function getUpcoming() {
-  console.log(API_KEY);
-  return fetch(`${endPointUpcoming}?api_key=${API_KEY}`)
+function getUpcoming(adultSearch) {
+  return fetch(`${endPointUpcoming}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}&with_release_type=2`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -68,11 +65,73 @@ function getUpcoming() {
     });
 }
 
+// Function to retrieve a single movie page by ID
+function getMovies(movieId, adultSearch) {
+  return fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&include_adult=${adultSearch}&language=en-US&${REGION}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error;
+    })
+}
 
-export { getPopular, getTopRated, getUpcoming, getNowPlaying };
+// Function to get a movie genre 
+function getMovieGenre() {
+  return fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch genres');
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error;
+    })
+}
 
+// Function to get a movie trailer 
+function getTrailer(movieId) {
+  return fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Error fetching trailer:');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (data.results && data.results.length > 0) {
+        return data.results.find(video => video.type === 'Trailer');
+      }
+      return null;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error;
+    })
+}
 
+// Function to get a movie casting list
+function getMovieCast(movieId) {
+  return fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Error fetching movie cast data");
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error("Error fetching movie cast:", error);
+      throw error;
+    });
+}
 
+export { getPopular, getTopRated, getUpcoming, getNowPlaying, getMovies, getMovieGenre, getTrailer, getMovieCast };
 
 // {
 //   "change_keys": [

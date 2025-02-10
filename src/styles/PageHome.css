@@ -1,0 +1,9 @@
+.home-banner .swiper-pagination-bullet-active {
+    --swiper-theme-color: #B5936E;
+    
+}
+
+.home-banner .swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+}
