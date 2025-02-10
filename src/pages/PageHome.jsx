@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import Header from '../components/Header'
+import Header from '../components/Header'
 // import Footer from '../components/Footer'
 import Movies from "../components/Movies";
 // import MovieCard from "../components/MovieCard";
@@ -79,6 +79,9 @@ function PageHome() {
 
   return (
     <>
+
+      <Header />
+    
       {/* <Header /> */}
       <div className="hero-container">
         <Swiper
@@ -95,6 +98,7 @@ function PageHome() {
           ))}
         </Swiper>
       </div>
+
       <h1>Home Page</h1>
       <Tabs>
         <TabList>

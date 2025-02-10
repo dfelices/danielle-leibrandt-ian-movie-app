@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -10,8 +9,8 @@
 	- Typography
 	- Elements
 	- Links
-# Layouts
-# Components (CALLED IN component-specific files) 
+	# Layouts
+	# Components (CALLED IN component-specific files) 
 	- Header
 	- Main
 	- Footer
@@ -20,29 +19,27 @@
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-/* Typography
---------------------------------------------- */
+/* Font - Syne */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&display=swap');
 
-:root {
+	/* Colours */
+	
+	:root {
 	--main-bg-color: #E5ECEA;
-	--main-font-black: #292726;
-	--main-font-white: #FFFFFF;
-	--hover-blue: #9BE3EF;
-	--heading-font: "Syne", serif;
-	--body-font: "Source Code Pro", serif;
+    --main-font-black: #292726;
+    --main-font-white: #FFFFFF;
+    --hover-blue: #9BE3EF;
+	--hover-brown: #B5936E;
+    --heading-font: "Syne", serif;
+	--button-font: "Source Code Pro", serif;
+    --body-font: "Source Code Pro", serif;
   }
 
-/* body
+/* Typography
 --------------------------------------------- */
-
-/* Colours
---------------------------------------------- */
-
 
 /* Elements
 --------------------------------------------- */
-
 
 /* Links, Inputs, Textareas
 --------------------------------------------- */
@@ -58,11 +55,12 @@
 /* Header
 --------------------------------------------- */
 
-
 /* Main
 --------------------------------------------- */
 
+body {
+  background-color: var(--main-bg-color);
+}
 
 /* Footer
 --------------------------------------------- */
-
