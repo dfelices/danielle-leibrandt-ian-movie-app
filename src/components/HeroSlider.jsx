@@ -1,9 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { URL_IMAGE } from '../globals/globals';
 import { formatReleaseDate } from '../utilities/toolbelt';
-import '../styles/base.css';
 import '../styles/HeroSlider.css';
-import { useNavigate } from 'react-router-dom';
+import '../styles/PageHome.css';
 
 // HeroSlider receives a prop called movie If movie is null or undefined return div
 const HeroSlider = ({ movie }) => {
@@ -23,19 +23,17 @@ const HeroSlider = ({ movie }) => {
         // Get the hero images from the URL
         <div className="hero-slider">
             <img
-                className="hero-movie-image"
+                className="hero-image"
                 src={`${URL_IMAGE}/w1280/${movie.backdrop_path}`}
                 alt={`${movie.title} poster`}
             />
-            <div className='hero_movie_title'>
-                <h2>{movie.title}</h2>
-            </div>
-            <div className="hero-movie-info">
-                <h3 className='hero_release_date'>
-                    {formatReleaseDate(movie.release_date)}</h3>
-                <p className='hero_overview'>
-                    {movie.overview}</p>
-                <button className="moreinfo_btn" onClick={handleMoreInfo}>More Info</button>
+            <div className='hero-info-container'>
+                <h1 className='hero-title'>{movie.title}</h1>
+                <h2 className='hero-release-date'>
+                    {formatReleaseDate(movie.release_date)}</h2>
+                <h3 className='hero-overview'>
+                    {movie.overview}</h3>
+                <button className="moreinfo-btn" onClick={handleMoreInfo}>More Info</button>
             </div>
         </div>
     );

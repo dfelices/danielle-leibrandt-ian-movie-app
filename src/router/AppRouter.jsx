@@ -15,7 +15,7 @@ function AppRouter() {
         <Header />
       <Routes>
         <Route path="/" element={<PageHome />} />
-        <Route path="/pagemovie/:id" element={<PageMovie />} />
+        <Route path="/movie/:id" element={<PageMovie />} />
         <Route path="/favorites" element={<PageFavorites />} />
         <Route path="/no-favorites" element={<PageNoFavorites />} />
         <Route path="/about" element={<PageAbout />} />
