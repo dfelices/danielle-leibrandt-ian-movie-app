@@ -1,3 +1,7 @@
+/*===============================================
+===========ABOUT PAGE DESIGN SECTION===========
+================================================*/
+
 .about-page {
     background-color: var(--main-bg-color);
     background-image: url(../media/about-background.jpg);
@@ -44,6 +48,10 @@
     font-family: var(--body-font);
     margin: 0;
 }
+
+/*===============================================
+===============MEDIA QUERY SECTION===============
+================================================*/
 
 @media screen and (min-width: 768px) {
     .about-page {
@@ -97,11 +105,15 @@
 
 @media screen and (min-width: 1440px) {
     .about-page {
-        padding-left: 18rem;
+        padding-left: 20rem;
     }
 
     .about-text {
         font-size: 1.2rem;
         width: 50%;
+    }
+    .tmdb-text {
+        padding-top: 5rem;
+        font-size: 1.2rem;
     }
 }
