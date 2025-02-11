@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { getMovies, getMovieCast, getTrailer } from "../utilities/api";
 import { URL_IMAGE } from "../globals/globals";
 import { formatRating, formatRuntime, formatReleaseDate } from "../utilities/toolbelt";
-import "../styles/Movies.css";
+import "../styles/Movie.css";
 
 const PageMovie = () => {
 
@@ -47,9 +47,7 @@ const PageMovie = () => {
     return (
         <>
             <div className="single-movie-wrapper">
-                <div className="single-movie-title">
-                    <h1>{movie.title}</h1>
-                </div>
+                <h1 className="single-movie-title">{movie.title}</h1>
                 <div className="single-movie-container">
                     <div className="single-movie-poster">
                         <img
