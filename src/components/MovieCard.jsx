@@ -1,9 +1,15 @@
 import "../styles/MovieCard.css";
 import { URL_IMAGE } from "../globals/globals.js";
 import FavoriteButton from "./FavoriteButton.jsx";
+import { useNavigate } from "react-router-dom";
 
 function MovieCard({ movie }) {
-  // const navigate = useNavigate()
+  
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/movie/${movie.id}`);
+  }
 
   const getRatingColor = (rating) => {
     if (rating >= 8) return "green";
@@ -24,27 +30,27 @@ function MovieCard({ movie }) {
 
   return (
     <>
-      <div className="movie-card">
-        <img src={`${URL_IMAGE}/w342/${movie.poster_path}`} alt={movie.title} />
-        <div className="backdrop">
-          <div className="rating-and-favorite">
-            <div
-              className="rating-border"
-              style={{ borderColor: getRatingColor(movie.vote_average) }}
-            >
-              {Math.round(movie.vote_average * 10)}
+        <div className="movie-card" onClick={handleClick}>
+          <img src={`${URL_IMAGE}/w342/${movie.poster_path}`} alt={movie.title} />
+          <div className="backdrop">
+            <div className="rating-and-favorite">
+              <div
+                className="rating-border"
+                style={{ borderColor: getRatingColor(movie.vote_average) }}
+              >
+                {Math.round(movie.vote_average * 10)}
+              </div>
+              <FavoriteButton movie={movie} />
             </div>
-            <FavoriteButton movie={movie} />
-          </div>
-          <div className="title-and-release">
-            <h2>{movie.title}</h2>
-            <p className="release-date">{formatDate(movie.release_date)}</p>
-            <p className="movie-excerpt">
-              {getShortDescription(movie.overview)}
-            </p>
+            <div className="title-and-release">
+              <h2>{movie.title}</h2>
+              <p className="release-date">{formatDate(movie.release_date)}</p>
+              <p className="movie-excerpt">
+                {getShortDescription(movie.overview)}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
     </>
   );
 }

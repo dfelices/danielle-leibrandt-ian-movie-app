@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
-import Header from '../components/Header'
-// import Footer from '../components/Footer'
 import Movies from "../components/Movies";
-// import MovieCard from "../components/MovieCard";
 import HeroSlider from "../components/HeroSlider";
 
 // Get API's for the movies 
