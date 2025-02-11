@@ -5,7 +5,6 @@ import '../styles/base.css';
 import '../styles/Header.css';
 import '../styles/Nav.css';
 
-
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false)
 
