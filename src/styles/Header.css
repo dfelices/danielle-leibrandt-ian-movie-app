@@ -4,6 +4,7 @@
     border: solid 5px var(--main-font-black);
     margin: 0.25rem;
     background-color: var(--main-bg-color);
+    max-width: 1920px;
 }
 
 header{
@@ -51,7 +52,7 @@ header{
     margin: 0;
 }
 
-@media (min-width: 768px){
+@media (min-width: 1200px){
     .logo a{
         font-size: 4.6875rem;
     }
@@ -70,7 +71,7 @@ p{
     display: none;
   }
   
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
     .mobile-logo {
         display: none;
         padding: 0;
