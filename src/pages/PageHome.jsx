@@ -15,10 +15,11 @@ import "../styles/PageHome.css";
 
 // Library utilities { Swiper, Tabs }
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, EffectFade } from "swiper/modules";
+import { Pagination, EffectFade, Autoplay } from "swiper/modules";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 import "../styles/Movies.css";
 import "react-tabs/style/react-tabs.css";
 import "swiper/css/effect-fade";
@@ -92,6 +93,10 @@ function PageHome() {
           fadeEffect={{
             crossFade: true, // Enable cross-fade between slides
           }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
           pagination={{
             clickable: true,
             bulletClass: "swiper-pagination-bullet",
@@ -100,7 +105,7 @@ function PageHome() {
               return '<span class="' + className + '"></span>';
             },
           }}
-          modules={[Pagination, EffectFade]} // Add EffectFade module
+          modules={[Pagination, EffectFade, Autoplay]} // Add EffectFade module
         >
           {heroMovies.map((movie) => (
             <SwiperSlide key={movie.id}>
