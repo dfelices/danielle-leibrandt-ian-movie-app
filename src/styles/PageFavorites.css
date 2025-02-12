@@ -2,6 +2,12 @@
   padding: 20px;
   max-width: 1300px;
   margin: 0 auto;
+  min-height: calc(
+    100vh - 160px
+  ); /* Reduced from 100px to account for footer */
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .movie-grid {
@@ -9,11 +15,12 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: flex-start;
+  min-height: 60vh; /* Reduced from 70vh to prevent overflow */
 }
 
 .movie-card {
-  flex: 0 0 300px;
-  height: 450px;
+  flex: 0 0 128px;
+  height: 192px;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
@@ -21,6 +28,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0;
   padding: 0;
+  animation: fadeIn 0.3s ease-in;
 }
 
 .backdrop {
@@ -51,28 +59,32 @@ h1 {
   }
 }
 
-@media (max-width: 480px) {
+/* DANIELLE COMMENTED THIS OUT */
+
+/* @media (max-width: 1200px) {
   .favorites-page {
     max-width: 320px;
-    padding: 10px; /* Reduce padding for smaller screens */
+    padding: 10px; 
+    min-height: calc(100vh - 160px); 
   }
   .movie-card {
-    flex: 0 0 calc(50% - 5px); /* Calculate width: (100% - gap) / 2 */
+    flex: 0 0 calc(50% - 5px); 
     height: 218px;
-    font-size: 0.7rem; /* Base font size for card content */
+    font-size: 0.7rem; 
   }
   .movie-grid {
     gap: 10px;
-    justify-content: space-between; /* Distribute space between items */
+    justify-content: space-between; 
+    min-height: 60vh; 
   }
-  /* Scale down the rating circle */
+ 
   .rating-border {
     width: 30px;
     height: 30px;
     font-size: 0.8rem;
     border-width: 2px;
   }
-  /* Adjust title size */
+ 
   .title-and-release h2 {
     font-size: 1rem;
     margin-bottom: 4px;
@@ -82,42 +94,60 @@ h1 {
     font-size: 0.5rem;
     margin-bottom: 4px;
   }
-  /* Adjust date and excerpt text */
+
   .release-date,
   .movie-excerpt {
     font-size: 0.6em;
     line-height: 1.2;
   }
-  /* Adjust padding of the backdrop */
+
   .backdrop {
     padding: 10px;
   }
-  /* Adjust spacing between elements */
+
   .rating-and-favorite {
     gap: 5px;
     margin-bottom: 5px;
   }
-  /* Scale down the favorite icon */
+
   .fave-icon {
     width: 20px;
     height: 20px;
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-/* @media (min-width: 768px) {
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 0;
+  transform: translateY(-20px);
+} */
+
+
+
+ @media (min-width: 768px) {
   .movie-card {
       flex: 1 1 300px;
       max-width: 300px;
       height: 450px; 
   }
 }
-
-@media (min-width: 1200px) {
-  .movie-card {
-      flex: 1 1 300px;
-      max-width: 300px;
-      height: 450px; 
-  }
-}
- */
