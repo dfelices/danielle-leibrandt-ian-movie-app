@@ -2,6 +2,12 @@
   padding: 20px;
   max-width: 1300px;
   margin: 0 auto;
+  min-height: calc(
+    100vh - 160px
+  ); /* Reduced from 100px to account for footer */
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .movie-grid {
@@ -9,6 +15,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: flex-start;
+  min-height: 60vh; /* Reduced from 70vh to prevent overflow */
 }
 
 .movie-card {
@@ -21,6 +28,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0;
   padding: 0;
+  animation: fadeIn 0.3s ease-in;
 }
 
 .backdrop {
@@ -55,6 +63,7 @@ h1 {
   .favorites-page {
     max-width: 320px;
     padding: 10px; /* Reduce padding for smaller screens */
+    min-height: calc(100vh - 160px); /* Match the desktop height calculation */
   }
   .movie-card {
     flex: 0 0 calc(50% - 5px); /* Calculate width: (100% - gap) / 2 */
@@ -64,6 +73,7 @@ h1 {
   .movie-grid {
     gap: 10px;
     justify-content: space-between; /* Distribute space between items */
+    min-height: 60vh; /* Match the desktop grid height */
   }
   /* Scale down the rating circle */
   .rating-border {
@@ -104,6 +114,31 @@ h1 {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 0;
+  transform: translateY(-20px);
+}
 
 /* @media (min-width: 768px) {
   .movie-card {
