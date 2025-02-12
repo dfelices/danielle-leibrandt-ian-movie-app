@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="border">
       <footer>
-        <p>&copy; 2021 moo.v</p>
+        <p>&copy; 2025 moo.v</p>
       </footer>
     </div>
   );
