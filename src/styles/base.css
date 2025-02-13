@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -8,59 +7,38 @@
 	- Media width
 # Base
 	- Typography
-	- Elements
-	- Links
-# Layouts
-# Components (CALLED IN component-specific files) 
-	- Header
-	- Main
-	- Footer
+	- Fonts
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
 
-/* Colours */
+/* Font - Syne */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&display=swap");
+
+/* Colours, Typography */
 
 :root {
-    --main-bg-color: #E5ECEA;
-    --main-font-black: #292726;
-    --main-font-white: #FFFFFF;
-    --hover-blue: #9BE3EF;
-    --heading-font: "Syne", serif;
-    --body-font: "Source Code Pro", serif;
-  }
-
-
-/* Typography
---------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&display=swap');
-
-
-/* Elements
---------------------------------------------- */
-
-
-/* Links, Inputs, Textareas
---------------------------------------------- */
-
-/*--------------------------------------------------------------
-# Layout
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-
-/* Header
---------------------------------------------- */
-
+  --main-bg-color: #e5ecea;
+  --main-font-black: #292726;
+  --main-font-white: #ffffff;
+  --hover-blue: #9be3ef;
+  --hover-brown: #b5936e;
+  --hover-brown-rgb: 165, 132, 115;
+  --heading-font: "Syne", serif;
+  --button-font: "Source Code Pro", serif;
+  --body-font: "Source Code Pro", serif;
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
 /* Main
 --------------------------------------------- */
 
+body {
+  background-color: var(--main-bg-color);
+}
 
 /* Footer
 --------------------------------------------- */
-

@@ -1,0 +1,85 @@
+.react-tabs{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.movies {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 304px;
+    gap: 0.5rem;
+}
+
+.tab-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 1rem;
+    list-style: none;
+    width: 100%;
+    padding: 1rem 0 0 0;
+    margin: 0 0 0 0.85rem;
+    font-family: var(--heading-font);
+    font-weight: 500;
+    letter-spacing: 0.75px;
+    max-width: 128px;
+    font-size: 16px;
+    border-right: solid 0.175rem #000000;
+    cursor: pointer;
+}
+  
+.tab-list li{
+    padding-right: 0.5rem;
+}
+
+.react-tabs__tab--selected {
+    font-weight: 800;
+    font-size: 16px;
+  }
+
+/* Media Query for screens wider than 768px */
+@media (min-width: 48em) {
+    .movies {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 48rem;
+        gap: 1em;
+    }
+
+    .tab-list{
+        margin: 0;
+        flex: 1 1 300px;
+        max-width: 300px;
+        height: 450px;
+        font-size: 25px;
+        letter-spacing: 1.75px;
+        border-right: solid 0.3rem #000000;
+    }
+
+    .react-tabs__tab--selected {
+        font-size: 25px;
+      }
+
+}
+
+/* Media Query for screens wider than 1200px */
+@media (min-width: 75em) {
+    .movies{
+        max-width: 75rem;
+    }
+
+}
+
+/* Media Query for screens wider than 1400px */
+@media (min-width: 87.5em) {
+    .movies{
+        max-width: 87.5rem;
+    }
+}

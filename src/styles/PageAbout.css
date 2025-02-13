@@ -1,0 +1,122 @@
+/*===============================================
+===========ABOUT PAGE DESIGN SECTION===========
+================================================*/
+
+.about-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.about-page {
+  background-color: var(--main-bg-color);
+  background-image: url(../media/about-us-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  height: 530px;
+  padding: 2rem;
+}
+
+.about-header h1 {
+  font-size: 2rem;
+  font-family: var(--heading-font);
+  margin: 0;
+}
+
+.about-header h2 {
+  font-size: 1.2rem;
+  font-family: var(--heading-font);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-text {
+  font-size: 0.65rem;
+  font-family: var(--body-font);
+  margin-top: 0.5rem;
+  width: 80%;
+}
+
+.tmdb-text img {
+  width: 7rem;
+  height: auto;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.tmdb-text p {
+  width: 100%;
+  font-size: 0.8rem;
+  font-family: var(--body-font);
+  margin: 0;
+}
+
+/*===============================================
+===============MEDIA QUERY SECTION===============
+================================================*/
+
+@media screen and (min-width: 48em) {
+  .about-page {
+    background-size: contain;
+    height: 600px;
+    padding: 6rem;
+  }
+
+  .about-header h1 {
+    font-size: 3rem;
+  }
+
+  .about-header h2 {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    width: 70%;
+  }
+
+  .tmdb-text p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .about-page {
+    background-size: contain;
+    height: 840px;
+    padding: 8rem;
+  }
+
+  .about-header h1 {
+    font-size: 4rem;
+  }
+
+  .about-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+    width: 60%;
+  }
+
+  .tmdb-text p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .about-page {
+    padding: 8rem;
+  }
+
+  .about-text {
+    width: 50%;
+  }
+
+  .tmdb-text {
+    padding-top: 5rem;
+  }
+}
