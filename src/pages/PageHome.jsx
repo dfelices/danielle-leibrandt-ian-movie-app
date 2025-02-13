@@ -115,6 +115,7 @@ function PageHome() {
         </Swiper>
       </div>
 
+{/* React tab library applied here, when tab is selected, that list of movies is rendered */}
       <Tabs
         selectedIndex={selectedTab}
         onSelect={(index) => setSelectedTab(index)}
