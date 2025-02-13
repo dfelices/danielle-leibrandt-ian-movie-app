@@ -54,7 +54,9 @@ const PageMovie = () => {
   return (
     <>
       <div className="single-movie-wrapper">
-        <h1 className="single-movie-title">{movie.title}</h1>
+        <h1 className="single-movie-title">
+          {movie.title}
+          </h1>
         <div className="single-movie-container">
           <div className="single-movie-poster">
             <img

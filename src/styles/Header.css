@@ -52,12 +52,6 @@ header{
     margin: 0;
 }
 
-@media (min-width: 1200px){
-    .logo a{
-        font-size: 4.6875rem;
-    }
-}
-
 .logo a:hover{
     color: var(--hover-brown);
 }
@@ -80,6 +74,10 @@ p{
   
     .desktop-logo {
       display: flex;
+    }
+
+    .border {
+        margin: .25rem auto;
     }
 
 }
