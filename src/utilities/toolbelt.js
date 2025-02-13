@@ -18,7 +18,7 @@ function formatRating(rating) {
 
 // Changes the color of the rating based on the value
 function getRatingColor(rating) {
-  if (rating >= 8) return "green";
+  if (rating >= 8) return "rgb(19, 252, 3)";
   if (rating >= 5) return "yellow";
   return "red";
 }

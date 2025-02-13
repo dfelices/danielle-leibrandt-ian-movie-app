@@ -17,6 +17,10 @@
   min-height: 60vh;
 }
 
+.fave-header {
+  text-shadow: var(--text-shadow);
+}
+
 .movie-card {
   flex: 0 0 calc(50% - 5px);
   height: 218px;
@@ -24,7 +28,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   margin: 0;
   padding: 0;
   animation: fadeIn 0.3s ease-in;

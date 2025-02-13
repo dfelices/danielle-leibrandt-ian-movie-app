@@ -34,7 +34,7 @@ const PageFavorites = () => {
     <>
       {/* Main container with conditional exit animation class */}
       <div className={`favorites-page ${isExiting ? "page-exit" : ""}`}>
-        <h1>Favorites</h1>
+        <h1 className="fave-header">Favorites</h1>
         {/* Container for animated movie grid */}
         <TransitionGroup className="movie-grid">
           {/* Map through favorites array and render each movie */}
