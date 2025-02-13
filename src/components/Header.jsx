@@ -47,11 +47,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-{/**
- * HTML for the Hamburger icon modified from HTMl
- * found at this codepen:
- * https://codepen.io/RRoberts/pen/ZBYaJr
- */}

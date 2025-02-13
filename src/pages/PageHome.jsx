@@ -16,7 +16,7 @@ import "../styles/PageHome.css";
 // Library utilities { Swiper, Tabs }
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectFade, Autoplay } from "swiper/modules";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { Tabs, TabPanel } from "react-tabs";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
