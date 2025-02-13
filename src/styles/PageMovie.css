@@ -132,6 +132,13 @@
   border-radius: 10px;
 }
 
+/* fixes distortion between these resolution ranges */
+@media (min-width: 25.625rem) and (max-width: 35.6875rem) {
+  .single-movie-poster img {
+    height: 60%;
+  }
+}
+
 .actor-image {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
