@@ -16,6 +16,7 @@ function formatRating(rating) {
   };
 }
 
+// Changes the color of the rating based on the value
 function getRatingColor(rating) {
   if (rating >= 8) return "green";
   if (rating >= 5) return "yellow";
@@ -53,4 +54,17 @@ function getRatingStyles() {
     }`;
 }
 
-export { formatReleaseDate, formatRating, formatRuntime, getRatingStyles };
+// Truncate long text with ellipsis
+function getShortDescription(description, maxLength = 150) {
+  return description.length > maxLength
+    ? description.substring(0, maxLength) + "..."
+    : description;
+}
+
+export {
+  formatReleaseDate,
+  formatRating,
+  formatRuntime,
+  getRatingStyles,
+  getShortDescription, // Add this to exports
+};

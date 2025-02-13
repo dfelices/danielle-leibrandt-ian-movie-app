@@ -1,16 +1,18 @@
 @import url("../styles/base.css");
 
+/* Base Navigation Styles (Mobile First) */
 .main-nav {
   font-family: var(--heading-font);
   background-color: var(--main-bg-color);
   color: var(--main-font-black);
-  font-size: 3rem;
+  font-size: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
+/* Visibility Classes */
 .main-nav .hide {
   overflow: hidden;
   visibility: hidden;
@@ -18,63 +20,15 @@
   height: 0;
 }
 
-.main-nav .show {
+.main-nav .show,
+.show {
   overflow: visible;
   visibility: visible;
   width: 100%;
   height: 100%;
 }
 
-.show {
-  width: 100%;
-  height: auto;
-}
-
-@media (min-width: 768px) {
-  .main-nav {
-    overflow: visible;
-    visibility: visible;
-    width: fit-content;
-    height: auto;
-  }
-
-  /* .main-nav ul{
-        visibility: visible;
-    }
-
-    .main-nav.hide ul {
-        visibility: visible;
-      }
-      
-    .main-nav.show ul {
-        visibility: visible;
-    } */
-}
-
-.hamburger-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50.96px;
-  height: 50.96px;
-}
-
-svg {
-  width: 100%;
-  height: 100%;
-}
-
-a,
-a:visited,
-a:hover,
-a:active,
-a:focus {
-  text-decoration: none;
-  color: var(--main-font-black);
-  margin: 0;
-  padding: 0;
-}
-
+/* Navigation List Styles */
 .main-nav ul {
   list-style: none;
   font-size: 2rem;
@@ -89,36 +43,7 @@ a:focus {
   visibility: visible;
 }
 
-@media (min-width: 768px) {
-  .main-nav ul {
-    font-size: 1.875rem;
-    font-weight: 400;
-    visibility: visible;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    /* column-gap: 2rem; */
-  }
-
-  /* ul.show{
-        width: 100%;
-        height: 100%;
-    } */
-  /* 
-    ul.show{
-        visibility: visible;
-        flex-direction: row;
-        column-gap: 2rem;
-    }
-
-    ul.hide{
-        visibility: visible;
-        flex-direction: row;
-        column-gap: 2rem;
-    } */
-}
-
+/* List Item Styles */
 .main-nav li {
   width: 100%;
   height: auto;
@@ -127,6 +52,18 @@ a:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* Link Styles */
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: var(--main-font-black);
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav li a {
@@ -144,63 +81,24 @@ a:focus {
   color: white;
 }
 
-@media (min-width: 768px) {
-  .main-nav li {
-    height: 100%;
-  }
-}
-
-/* /* .border-left{
-    border: none;
-} */
-
-@media (min-width: 768px) {
-  .border-left {
-    height: 100%;
-    padding: 0rem;
-    border-left: solid 5px var(--main-font-black);
-  }
-}
-
-@media (min-width: 768px) {
-  .border-left a {
-    padding: 2rem 4rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .btn-main-nav {
-    display: none;
-  }
-}
-
-.search-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 45px;
-  width: 45px;
-  padding: 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.main-nav li a:hover .search-icon {
-  filter: brightness(0) invert(1); /* Makes the icon white on hover */
-}
-
-.menu-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  padding: 0.5rem;
-}
-
+/* Icon Styles */
+.search-icon,
+.menu-icon,
 .close-icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
+}
+
+.search-icon {
+  height: 24px;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.menu-icon,
+.close-icon {
   height: auto;
   width: 100%;
   padding: 0.5rem;
@@ -211,4 +109,186 @@ a:focus {
 .close-icon img {
   width: 100%;
   height: 100%;
+  opacity: 0.8;
+}
+
+/* Search Styles */
+.search-wrapper {
+  justify-content: center;
+  width: auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-wrapper input {
+  min-width: 80%;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 16px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background: var(--main-bg-color);
+  color: black;
+  font-family: var(--heading-font);
+  font-size: 1rem;
+}
+
+/* Style placeholder text */
+.search-wrapper input::placeholder {
+  color: var(--main-font-black);
+  font-family: var(--body-font);
+  font-size: 1em;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.search-results {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  top: 300px;
+  z-index: 1000;
+  max-height: calc(100vh - 140px);
+  background: var(--main-bg-color);
+  border-radius: 4px;
+  padding: 0;
+  list-style: none;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-results li {
+  display: block !important; /* Force block display */
+  width: 100%;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease; /* Add transition for smooth hover effect */
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: black;
+  line-height: 1.2;
+  height: auto; /* Remove fixed height */
+  min-height: 28px; /* Use min-height instead */
+}
+
+.search-results li:hover {
+  background-color: var(--hover-brown);
+  color: white;
+}
+
+/* Scrollbar Styles */
+.search-results::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search-results::-webkit-scrollbar-track {
+  background: var(--main-bg-color);
+  border-radius: 4px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background: var(--hover-brown);
+  border-radius: 4px;
+}
+
+/* Animations */
+@keyframes expandSearch {
+  from {
+    width: 0;
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    width: 300px;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 48em) {
+  /* 768px */
+  .main-nav {
+    overflow: visible;
+    visibility: visible;
+    width: fit-content;
+    height: auto;
+    font-size: 3rem;
+  }
+
+  .main-nav ul {
+    font-size: 1.875rem;
+    font-weight: 400;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .main-nav li {
+    height: 100%;
+  }
+
+  .border-left {
+    height: 100%;
+    padding: 0;
+    border-left: solid 5px var(--main-font-black);
+  }
+
+  .border-left a {
+    padding: 2rem 4rem;
+  }
+
+  .btn-main-nav {
+    display: none;
+  }
+
+  .search-wrapper {
+    position: relative;
+    width: auto;
+  }
+
+  .search-wrapper input {
+    min-width: 200px;
+    width: auto;
+  }
+
+  .search-results {
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    transform: none !important;
+    min-width: 350px;
+    max-width: calc(100vw - 40px);
+    margin-top: 5px;
+    display: block !important; /* Force block display for container */
+  }
+
+  .search-results li {
+    display: block !important; /* Force block display for list items */
+    width: 100% !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    padding: 8px 16px;
+    height: auto !important;
+    min-height: 40px;
+    line-height: 24px;
+    flex: none !important; /* Prevent flexbox interference */
+  }
 }

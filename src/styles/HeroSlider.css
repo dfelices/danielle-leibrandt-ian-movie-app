@@ -89,6 +89,15 @@
   justify-content: center;
   width: 5rem;
   margin-top: 0.5rem;
+  transition: all 0.3s ease; /* Add smooth transition */
+}
+
+.hero-info-container .moreinfo-btn:hover {
+  transform: scale(1.1);
+  background-color: var(--hover-brown);
+  color: var(--main-font-white);
+  border-color: var(--hover-brown);
+  cursor: pointer;
 }
 
 /*==================================================
