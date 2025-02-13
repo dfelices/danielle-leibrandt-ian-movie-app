@@ -57,7 +57,7 @@
 ===============MEDIA QUERY SECTION===============
 ================================================*/
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .about-page {
     background-size: contain;
     height: 600px;
@@ -82,7 +82,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .about-page {
     background-size: contain;
     height: 840px;
@@ -107,7 +107,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 90em) {
   .about-page {
     padding: 8rem;
   }

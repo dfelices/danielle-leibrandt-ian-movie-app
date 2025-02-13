@@ -213,7 +213,7 @@ h3 {
 ===============MEDIA QUERY SECTION===============
 ================================================*/
 
-@media (min-width: 25.5625rem) {
+@media (min-width: 25.5625em) {
   .single-movie-poster img {
     width: 180px;
   }
@@ -238,7 +238,7 @@ h3 {
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 48em) {
   .single-movie-poster img {
     width: 250px;
   }
@@ -263,7 +263,7 @@ h3 {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 64em) {
   .single-movie-poster img {
     width: 300px;
   }
@@ -311,7 +311,7 @@ h3 {
     } */
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 90em) {
   .movie-cast-section {
     position: absolute;
     top: 30rem;
@@ -319,7 +319,7 @@ h3 {
   }
 }
 
-@media screen and (min-width: 142rem) {
+@media screen and (min-width: 142em) {
   .movie-cast-section {
     position: absolute;
     top: 30rem;
@@ -327,7 +327,7 @@ h3 {
   }
 }
 
-@media screen and (min-width: 155rem) {
+@media screen and (min-width: 155em) {
   .movie-cast-section {
     position: absolute;
     top: 30rem;
