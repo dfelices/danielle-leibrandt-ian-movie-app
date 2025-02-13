@@ -20,7 +20,7 @@ function AppRouter() {
         <Route path="/no-favorites" element={<PageNoFavorites />} />
         <Route path="/about" element={<PageAbout />} />
       </Routes>
-      <Footer />
+        <Footer />
       </GlobalProvider>
     </BrowserRouter>
   );
