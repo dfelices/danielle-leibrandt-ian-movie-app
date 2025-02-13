@@ -10,10 +10,10 @@ function Movies({movies, selectedTab, setSelectedTab }) {
     <Tabs selectedIndex={selectedTab} onSelect={(index) => setSelectedTab(index)}>
       <div className="movies">
         <TabList className="tab-list">
-            <Tab className="tab">Popular</Tab>
-            <Tab className="tab">Top Rated</Tab>
-            <Tab className="tab">Now Playing</Tab>
-            <Tab className="tab">Upcoming</Tab>
+            <Tab className="tab">popular</Tab>
+            <Tab className="tab">top rated</Tab>
+            <Tab className="tab">now playing</Tab>
+            <Tab className="tab">upcoming</Tab>
         </TabList>
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} className="movie-card" />
