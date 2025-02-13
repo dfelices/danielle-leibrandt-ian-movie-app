@@ -24,6 +24,7 @@ const Nav = ({ navOpen, setNavOpen }) => {
     };
   }, []);
 
+  // BEGINNING OF ASSISTANCE OF COPILOT FOR SEARCH FUNCTIONALITY
   // Search functionality state management
   const [isSearchOpen, setIsSearchOpen] = useState(false); // Controls search input visibility
   const [searchQuery, setSearchQuery] = useState(""); // Stores search input value
@@ -79,6 +80,7 @@ const Nav = ({ navOpen, setNavOpen }) => {
     setSearchResults([]);
     navigate(`/movie/${movieId}`);
   };
+  // END OF ASSISTANCE WITH COPILOT FOR SEARCH FUNCTIONALITY
 
   return (
     // Main navigation container with responsive classes
