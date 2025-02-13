@@ -9,6 +9,7 @@
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero-image {
@@ -89,6 +90,15 @@
   justify-content: center;
   width: 5rem;
   margin-top: 0.5rem;
+  transition: all 0.3s ease; /* Add smooth transition */
+}
+
+.hero-info-container .moreinfo-btn:hover {
+  transform: scale(1.1);
+  background-color: var(--hover-brown);
+  color: var(--main-font-white);
+  border-color: var(--hover-brown);
+  cursor: pointer;
 }
 
 /*==================================================

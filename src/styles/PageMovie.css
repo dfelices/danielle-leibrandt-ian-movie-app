@@ -123,6 +123,21 @@
   border: 5px solid;
   margin-left: 0;
   margin-right: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-poster {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.actor-image {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.single-movie-info,
+.single-movie-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Specific styling for rating-border in PageMovie */

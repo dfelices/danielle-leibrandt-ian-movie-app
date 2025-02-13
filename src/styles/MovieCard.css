@@ -6,14 +6,19 @@
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced drop shadow */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Base styles (mobile first) */
 .movie-card:hover {
+  transform: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card.active {
   transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .movie-card img {
@@ -38,6 +43,11 @@
   justify-content: space-around;
 }
 
+/* Show backdrop when active on mobile/tablet */
+.movie-card.active .backdrop {
+  opacity: 1;
+}
+
 .movie-card:hover .backdrop {
   opacity: 1;
 }
@@ -45,7 +55,7 @@
 .title-and-release {
   text-align: center;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Stronger text shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .title-and-release h2 {
@@ -83,6 +93,8 @@
 .movie-excerpt {
   text-align: center;
   margin-top: auto;
+  margin-left: 10px;
+  margin-right: 10px;
   font-family: var(--body-font);
 }
 
@@ -106,18 +118,28 @@
   color: var(--main-font-white);
 }
 
-/* @media (min-width: 768px) {
-  .movie-card {
-    flex: 1 1 300px;
-    max-width: 300px;
-    height: 450px;
-  }
-} */
-
 @media (min-width: 1200px) {
   .movie-card {
     flex: 1 1 300px;
     max-width: 300px;
     height: 450px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 87.5em) {
+  .movie-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .movie-card:hover .backdrop {
+    opacity: 1;
+  }
+
+  /* Reset active styles for desktop */
+  .movie-card.active {
+    transform: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
 }

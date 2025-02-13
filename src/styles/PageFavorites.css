@@ -1,10 +1,9 @@
+/* Base styles (mobile first) */
 .favorites-page {
-  padding: 20px;
-  max-width: 1300px;
+  padding: 10px;
+  max-width: 320px;
   margin: 0 auto;
-  min-height: calc(
-    100vh - 160px
-  ); /* Reduced from 100px to account for footer */
+  min-height: calc(100vh - 160px);
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -13,31 +12,43 @@
 .movie-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: flex-start;
-  min-height: 60vh; /* Reduced from 70vh to prevent overflow */
+  gap: 10px;
+  justify-content: space-between;
+  min-height: 60vh;
+}
+
+.fave-header {
+  text-shadow: var(--text-shadow);
 }
 
 .movie-card {
-  flex: 0 0 128px;
-  height: 192px;
+  flex: 0 0 calc(50% - 5px);
+  height: 218px;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   margin: 0;
   padding: 0;
   animation: fadeIn 0.3s ease-in;
+  font-size: 0.7rem;
+}
+
+/* Remove hover effect for mobile and tablet */
+.movie-card:hover {
+  transform: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add active state for click effect */
+.movie-card:active {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .backdrop {
-  padding: 0;
-}
-
-.movie-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px;
 }
 
 h1 {
@@ -47,75 +58,114 @@ h1 {
   font-weight: 800;
 }
 
-@media (max-width: 1024px) {
-  .favorites-page {
-    max-width: 960px;
-  }
+/* Mobile-specific styles */
+.rating-border {
+  width: 30px;
+  height: 30px;
+  font-size: 0.8rem;
+  border-width: 2px;
 }
 
-@media (max-width: 768px) {
-  .favorites-page {
-    max-width: 640px;
-  }
+.title-and-release h2 {
+  font-size: 1rem;
+  margin-bottom: 4px;
 }
 
-/* DANIELLE COMMENTED THIS OUT */
+.title-and-release p {
+  font-size: 0.5rem;
+  margin-bottom: 4px;
+}
 
-/* @media (max-width: 1200px) {
+.release-date,
+.movie-excerpt {
+  font-size: 0.6em;
+  line-height: 1.2;
+}
+
+.rating-and-favorite {
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.fave-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Tablet breakpoint */
+@media (min-width: 48em) {
   .favorites-page {
-    max-width: 320px;
-    padding: 10px; 
-    min-height: calc(100vh - 160px); 
+    max-width: 48rem;
+    padding: 20px;
   }
-  .movie-card {
-    flex: 0 0 calc(50% - 5px); 
-    height: 218px;
-    font-size: 0.7rem; 
-  }
+
   .movie-grid {
-    gap: 10px;
-    justify-content: space-between; 
-    min-height: 60vh; 
+    gap: 20px;
+    justify-content: flex-start;
   }
- 
-  .rating-border {
-    width: 30px;
-    height: 30px;
-    font-size: 0.8rem;
-    border-width: 2px;
-  }
- 
-  .title-and-release h2 {
+
+  .movie-card {
+    flex: 0 0 300px;
+    height: 450px;
     font-size: 1rem;
-    margin-bottom: 4px;
+  }
+
+  .backdrop {
+    padding: 0;
+  }
+
+  .rating-border {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    border-width: 3px;
+  }
+
+  .title-and-release h2 {
+    font-size: 1.25rem;
   }
 
   .title-and-release p {
-    font-size: 0.5rem;
-    margin-bottom: 4px;
+    font-size: 0.875rem;
   }
 
   .release-date,
   .movie-excerpt {
-    font-size: 0.6em;
-    line-height: 1.2;
-  }
-
-  .backdrop {
-    padding: 10px;
-  }
-
-  .rating-and-favorite {
-    gap: 5px;
-    margin-bottom: 5px;
+    font-size: 0.875em;
+    line-height: 1.4;
   }
 
   .fave-icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 }
 
+/* Large tablet/small desktop breakpoint */
+@media (min-width: 75em) {
+  .favorites-page {
+    max-width: 75rem;
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 87.5em) {
+  .favorites-page {
+    max-width: 87.5rem;
+  }
+
+  .movie-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .movie-card:active {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -140,14 +190,4 @@ h1 {
 .page-exit {
   opacity: 0;
   transform: translateY(-20px);
-} */
-
-
-
- @media (min-width: 768px) {
-  .movie-card {
-      flex: 1 1 300px;
-      max-width: 300px;
-      height: 450px; 
-  }
 }

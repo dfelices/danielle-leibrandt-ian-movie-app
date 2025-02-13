@@ -1,10 +1,11 @@
+/* Base styles (mobile first) */
 .no-favorites-page {
-  padding: 20px;
-  max-width: 1280px;
+  padding: 1.25em;
+  max-width: 80em;
   margin: 0 auto;
   text-align: center;
   flex: 1;
-  min-width: 300px;
+  min-width: 18.75em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,27 +13,30 @@
 
 .explore-link {
   display: inline-block;
-  padding: 12px 24px;
-  margin: 20px 10px; /* Add horizontal margin */
+  padding: 0.75em 1.5em;
+  margin: 1.25em 0.625em;
   background-color: white;
   color: black;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 0.5em;
   font-family: var(--body-font);
   font-weight: bold;
-  border: 2px solid var(--hover-brown);
+  border: 0.125em solid var(--hover-brown);
   transition: all 0.3s ease;
-  transform-origin: center; /* Set transform origin to center */
-  position: relative; /* Add position relative */
-  width: fit-content; /* Add this to make button width fit content */
-  align-self: center; /* Center the button in flex container */
+  transform-origin: center;
+  position: relative;
+  width: fit-content;
+  align-self: center;
 }
 
 .explore-link:hover {
-  background-color: var(--hover-brown);
-  color: white;
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--hover-brown) !important;
+  color: white !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1) !important;
+  padding: 0.75em 1.5em !important; /* Match the original padding */
+  margin: 1.25em 0.625em !important;
+  border: 0.125em solid var(--hover-brown) !important;
 }
 
 p {
@@ -41,13 +45,14 @@ p {
 
 .no-fave-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1280px;
+  gap: 1em;
+  padding: 1em;
+  max-width: 80em;
   margin: 0 auto;
-  min-height: calc(100vh - 160px); /* Adjusted to account for header/footer */
+  min-height: calc(100vh - 8.75em);
 }
 
 .kaws {
@@ -63,18 +68,21 @@ p {
   object-fit: contain;
 }
 
-/* Add media query for larger screens */
-@media screen and (min-width: 1280px) {
+/* Tablet breakpoint */
+@media (min-width: 48em) {
+  /* 768px */
   .no-fave-wrapper {
-    padding: 4rem;
+    flex-direction: row;
+    gap: 2em;
+    padding: 2em;
+    min-height: calc(100vh - 10em);
   }
 }
 
-/* Add media query for mobile */
-@media screen and (max-width: 768px) {
+/* Desktop breakpoint */
+@media (min-width: 80em) {
+  /* 1280px */
   .no-fave-wrapper {
-    min-height: calc(100vh - 140px); /* Slightly reduced for mobile */
-    padding: 1rem;
-    gap: 1rem;
+    padding: 4em;
   }
 }
