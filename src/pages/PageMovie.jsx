@@ -157,7 +157,7 @@ const PageMovie = () => {
                     className="actor-image"
                     src={
                       actor.profile_path
-                        ? `${URL_IMAGE}w92/${actor.profile_path}`
+                        ? `${URL_IMAGE}w185/${actor.profile_path}`
                         : "https://via.placeholder.com/185x278.png?text=No+Image"
                     }
                     alt={actor.name}
