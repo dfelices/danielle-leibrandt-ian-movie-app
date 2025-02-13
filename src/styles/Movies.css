@@ -16,15 +16,6 @@
     max-width: 304px;
     gap: 0.5rem;
 }
-  
-.tabs-and-first-movie {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    column-gap: 0.5rem;
-    width: 100%;
-    margin-bottom: 0.5rem;
-}
 
 .tab-list{
     display: flex;
@@ -41,27 +32,18 @@
     border-right: solid 0.15rem #000000;
 }
   
-
 .tab-list li{
     padding-right: 0.5rem;
 }
   
 
 /* Media Query for screens wider than 768px */
-@media (min-width: 768px) {
+@media (min-width: 48em) {
     .movies {
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 768px;
-        gap: 1rem;
-    }
-
-    .tabs-and-first-movie{
-        flex-direction: row;
-        flex-wrap: wrap;
-        max-width: 768px;
-        column-gap: 1rem;
-        margin-bottom: 1rem;
+        max-width: 48rem;
+        gap: 1em;
     }
 
     .tab-list{
@@ -74,17 +56,16 @@
 }
 
 /* Media Query for screens wider than 1200px */
-@media (min-width: 1200px) {
+@media (min-width: 75em) {
     .movies{
-        max-width: 1200px;
+        max-width: 75rem;
     }
 
-    .tabs-and-first-movie{
-        max-width: 1400px;
-    }
 }
-@media (min-width: 1400px) {
+
+/* Media Query for screens wider than 1400px */
+@media (min-width: 87.5rem) {
     .movies{
-        max-width: 1400px;
+        max-width: 87.5rem;
     }
 }
