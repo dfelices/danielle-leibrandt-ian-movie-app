@@ -109,7 +109,7 @@ const Nav = ({ navOpen, setNavOpen }) => {
               {/* Search icon */}
               <div className="search-icon">
                 <img
-                  src={`/images/iconmonstr-magnifier-lined-64.png`}
+                  src={`images/iconmonstr-magnifier-lined-64.png`}
                   alt="Search"
                 />
               </div>

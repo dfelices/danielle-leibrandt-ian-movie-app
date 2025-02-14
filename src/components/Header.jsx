@@ -55,7 +55,7 @@ const Header = () => {
 
           {/* Hidden audio element for moo sound */}
           <audio ref={audioRef} preload="auto">
-            <source src="/images/moo.mp3" type="audio/mpeg" />
+            <source src="images/moo.mp3" type="audio/mpeg" />
           </audio>
 
           {/* Hamburger menu button for mobile */}
@@ -72,7 +72,7 @@ const Header = () => {
                 // X icon when menu is open
                 <div className="menu-icon">
                   <img
-                    src={`/images/iconmonstr-x-mark-lined-64.png`}
+                    src={`images/iconmonstr-x-mark-lined-64.png`}
                     alt="Magnifier Icon"
                   />
                 </div>
@@ -80,7 +80,7 @@ const Header = () => {
                 // Hamburger icon when menu is closed
                 <div className="close-icon">
                   <img
-                    src={`/images/iconmonstr-menu-right-lined-64.png`}
+                    src={`images/iconmonstr-menu-right-lined-64.png`}
                     alt="Close Icon"
                   />
                 </div>

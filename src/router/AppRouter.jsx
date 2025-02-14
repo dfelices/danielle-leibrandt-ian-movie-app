@@ -10,7 +10,7 @@ import { GlobalProvider } from "../context/GlobalContext";
 
 function AppRouter() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/danielle-leibrandt-ian-movie-app">
       <GlobalProvider>
         <Header />
       <Routes>

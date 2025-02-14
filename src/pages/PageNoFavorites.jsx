@@ -13,7 +13,7 @@ const PageNoFavorites = () => {
           </Link>
         </div>
         <div className="kaws">
-          <img src="../../images/kaws.png" alt="sad clown" />
+          <img src="images/kaws.png" alt="sad clown" />
         </div>
       </div>
     </>

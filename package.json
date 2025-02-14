@@ -1,5 +1,6 @@
 {
   "name": "project-setup",
+  "homepage": "/danielle-leibrandt-ian-movie-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
