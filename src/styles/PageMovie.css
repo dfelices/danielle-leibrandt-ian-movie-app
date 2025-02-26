@@ -1,14 +1,13 @@
 /*===============================================
 ===========SINGLE MOVIE DESIGN SECTION===========
 ================================================*/
-
 .single-movie-wrapper {
   background-color: var(--main-bg-color);
   margin: 0 auto;
   padding: 0;
   width: auto;
   min-height: 100vh;
-  max-width: 1920px; /* Add max-width */
+  max-width: 120rem; /* Add max-width */
 }
 
 .single-movie-title {
@@ -35,7 +34,7 @@
 }
 
 .single-movie-poster {
-  margin: 10px;
+  margin: 0.625rem;
   color: var(--main-font-black);
   font-family: var(--body-font);
   display: flex;
@@ -47,7 +46,7 @@
 .single-movie-poster img {
   width: 8.125rem;
   height: auto;
-  max-width: 342px;
+  max-width: 21.375rem;
   margin-right: 0.65rem;
 }
 
@@ -97,9 +96,9 @@
 
 .rating-circle {
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 1px solid black;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 0.0625rem solid black;
   border-radius: 50%;
   color: #292726;
   display: flex;
@@ -111,8 +110,8 @@
 }
 
 .rating-border {
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -120,15 +119,15 @@
   font-size: 1.4rem;
   font-family: var(--body-font);
   font-weight: bold;
-  border: 5px solid;
+  border: 0.3125rem solid;
   margin-left: 0;
   margin-right: 1rem;
 }
 
 /* Specific styling for rating-border in PageMovie */
 .single-movie-info .rating-border {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   font-size: 1rem;
   color: black;
 }
@@ -141,7 +140,7 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   width: calc(100% - 2rem);
-  max-width: 1920px; /* Add max-width */
+  max-width: 120rem; /* Add max-width */
   margin: 0;
 }
 
@@ -199,7 +198,7 @@ h3 {
 
 @media (min-width: 25.5625rem) {
   .single-movie-poster img {
-    width: 180px;
+    width: 11.25rem;
   }
 
   .single-movie-info {
@@ -211,20 +210,20 @@ h3 {
   }
 
   .trailer-section svg {
-    width: 35px;
-    height: 35px;
+    width: 2.1875rem;
+    height: 2.1875rem;
   }
 
   .rating-circle {
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
     font-size: 0.7rem;
   }
 }
 
 @media (min-width: 48rem) {
   .single-movie-poster img {
-    width: 250px;
+    width: 15.625rem;
   }
 
   .single-movie-info {
@@ -236,20 +235,20 @@ h3 {
   }
 
   .trailer-section svg {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .rating-circle {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     font-size: 0.7rem;
   }
 }
 
 @media (min-width: 64rem) {
   .single-movie-poster img {
-    width: 300px;
+    width: 18.75rem;
   }
 
   .single-movie-info {
@@ -270,13 +269,13 @@ h3 {
   }
 
   .trailer-section svg {
-    width: 45px;
-    height: 45px;
+    width: 2.8125rem;
+    height: 2.8125rem;
   }
 
   .rating-circle {
-    width: 35px;
-    height: 35px;
+    width: 2.1875rem;
+    height: 2.1875rem;
     font-size: 0.9rem;
   }
 
@@ -337,8 +336,8 @@ h3 {
 }
 
 .movie-favorite .fave-icon {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   fill: black;
 }
 
@@ -379,19 +378,19 @@ button:hover {
 .trailer-modal-content {
   position: relative;
   width: 90%;
-  max-width: 900px;
+  max-width: 56.25rem;
   aspect-ratio: 16/9;
 }
 
 .close-modal {
   position: absolute;
-  top: -40px;
+  top: -2.5rem;
   right: 0;
   background: none;
   border: none;
   color: white;
   font-size: 2rem;
   cursor: pointer;
-  padding: 5px;
+  padding: 0.3125rem;
   line-height: 1;
 }

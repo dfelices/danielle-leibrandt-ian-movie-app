@@ -3,18 +3,18 @@ import { useParams } from "react-router-dom";
 import { getMovies, getMovieCast, getTrailer } from "../utilities/api";
 import { URL_IMAGE } from "../globals/globals";
 import {
-  formatRating,
-  formatRuntime,
-  formatReleaseDate,
-} from "../utilities/toolbelt";
+         formatRating,
+         formatRuntime,
+         formatReleaseDate,
+        } from "../utilities/toolbelt";
 import "../styles/PageMovie.css";
 import FavoriteButton from "../components/FavoriteButton";
 
 const PageMovie = () => {
-  const { id } = useParams();
-  const [movie, setMovie] = useState(null);
-  const [trailer, setTrailer] = useState(null);
-  const [cast, setCast] = useState([]);
+  const { id }                        = useParams();
+  const [movie, setMovie]             = useState(null);
+  const [trailer, setTrailer]         = useState(null);
+  const [cast, setCast]               = useState([]);
   const [showTrailer, setShowTrailer] = useState(false);
 
   useEffect(() => {
@@ -75,6 +75,8 @@ const PageMovie = () => {
               <p className="single-movie-runtime">
                 {formatRuntime(movie.runtime)}
               </p>
+
+              {/* Trailer Section */}
               <div className="trailer-section">
                 <div
                   className="rating-border"
@@ -175,6 +177,6 @@ const PageMovie = () => {
       </div>
     </>
   );
-};
+}
 
 export default PageMovie;

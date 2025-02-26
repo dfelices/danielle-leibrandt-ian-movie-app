@@ -12,7 +12,7 @@ function About() {
         <div className="about-text">
           <p>
             At moo.v, we celebrate movies as journeys through time, emotion, and
-            imagination. Inspired by 1930s theaters and modern cinemas, we’ve
+            imagination. Inspired by 1930s theaters and modern cinemas, we've
             created a space to dive deep into stories. Founded in 2024, moo.v
             redefines movie discovery with cutting-edge design and intuitive
             functionality. Whether you love classics or modern films, our sleek

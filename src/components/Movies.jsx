@@ -45,7 +45,7 @@ function Movies({ title, movies, selectedTab, setSelectedTab }) {
 
       </div>
       <div className="movies">
-        {movies.slice(isLargeScreen ? 4 : isTabletScreen ? 3 : 2).map((movie) => (
+        {movies.slice(0, isLargeScreen ? 20 : isTabletScreen ? 18 : 17).map((movie) => (
           <MovieCard key={movie.id} movie={movie} className="movie-card" />
         ))}
       </div>

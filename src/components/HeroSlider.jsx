@@ -28,15 +28,24 @@ const HeroSlider = ({ movie }) => {
                 alt={`${movie.title} poster`}
             />
             <div className='hero-info-container'>
-                <h1 className='hero-title'>{movie.title}</h1>
+                <h1 className='hero-title'>
+                    {movie.title}
+                </h1>
                 <h2 className='hero-release-date'>
-                    {formatReleaseDate(movie.release_date)}</h2>
+                    {formatReleaseDate(movie.release_date)}
+                </h2>
                 <h3 className='hero-overview'>
-                    {movie.overview}</h3>
-                <button className="moreinfo-btn" onClick={handleMoreInfo}>More Info</button>
+                    {movie.overview}
+                </h3>
+                <button 
+                    className="moreinfo-btn" 
+                    onClick={handleMoreInfo}
+                    >
+                    More Info
+                </button>
             </div>
         </div>
     );
-};
+}
 
 export default HeroSlider;

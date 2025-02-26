@@ -1,10 +1,10 @@
 @import url('../styles/base.css');
 
 .border{
-    border: solid 5px var(--main-font-black);
+    border: solid 0.3125rem var(--main-font-black);
     margin: 0.25rem;
     background-color: var(--main-bg-color);
-    max-width: 1920px;
+    max-width: 120rem;
 }
 
 header{
@@ -19,7 +19,7 @@ header{
     justify-content: space-between;
 }
 
-@media (min-width: 768px){
+@media (min-width: 48em){
     header{
         flex-direction: row;
     }
@@ -45,7 +45,7 @@ header{
     font-family: var(--heading-font);
     font-size: 2rem;
     font-weight: 800;   
-    letter-spacing: 2.1px;
+    letter-spacing: 0.1313rem;
     text-decoration: none;
     color: var(--main-font-black);
     padding: 0;
